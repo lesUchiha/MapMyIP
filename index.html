@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geolocalización por IP</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- Estilo de Leaflet -->
+  <link rel="stylesheet" href="/styles/style.css"> <!-- Estilo propio -->
+</head>
+<body>
+
+  <div class="container">
+    <h1>MapMyIP</h1>
+    <h2>The best free IP geolocator</h2>
+    
+    <!-- Campo para ingresar una IP -->
+    <input type="text" id="ipAddress" placeholder="Ingresa una IP (opcional)">
+    <button class="btn" onclick="getLocationByIP()">Buscar ubicación</button>
+    
+    <!-- Información de la IP -->
+    <p id="ipInfo"></p>
+
+    <!-- Mapa donde se mostrará la ubicación -->
+    <div id="map"></div>
+  </div>
+
+  <!-- Leaflet.js -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+
+  <div class="credits">
+    <p>Diseñado por <a href="https://www.ejemplo.com" target="_blank">Tu Nombre</a> | Hecho con ❤️ usando HTML, CSS y JavaScript</p>
+  </div>
+  
+  <!-- Opcionalmente, puedes agregar un footer con más detalles -->
+  <footer>
+    <p>&copy; 2024 Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

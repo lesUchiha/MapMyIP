@@ -1,0 +1,234 @@
+/* Reset básico de márgenes y relleno */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global del body con gradiente azul a negro */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #1e3a8a, #0d1b2a); /* Gradiente azul oscuro a negro */
+  background-size: 400% 400%; /* Tamaño del gradiente */
+  animation: gradientAnimation 15s ease infinite; /* Animación de gradiente */
+  color: #e0e0e0; /* Texto claro */
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  flex-direction: column; /* Alinea todo el contenido verticalmente */
+}
+
+/* Animación de fondo con gradientes dinámicos */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor principal */
+.container {
+  text-align: center;
+  background-color: rgba(30, 30, 30, 0.85); /* Fondo oscuro con mayor transparencia */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8); /* Sombra más profunda */
+  width: 100%;
+  max-width: 650px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+  animation: slideUp 0.8s ease-out; /* Animación al aparecer */
+}
+
+/* Animación de deslizamiento hacia arriba del contenedor */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Efecto hover para el contenedor principal */
+.container:hover {
+  transform: scale(1.05); /* Efecto de aumento */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9); /* Sombra más profunda */
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.8rem;
+  color: #4FC3F7; /* Azul brillante */
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Sombra suave para el título */
+  animation: bounceIn 1.2s ease; /* Animación de rebote para el título */
+}
+
+/* Subtítulo */
+h2 {
+  font-size: 2rem;
+  color: #ffffff; /* Blanco brillante */
+  margin-bottom: 30px;
+  font-weight: 600;
+  position: relative;
+  top: -40px; 
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Sombra suave para el subtítulo */
+  animation: bounceIn 2s ease; /* Animación de rebote para el título */
+}
+
+/* Animación de rebote para los títulos */
+@keyframes bounceIn {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Estilo para el campo de entrada */
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  border: 2px solid #333;
+  border-radius: 12px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  transition: border-color 0.3s, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0); /* Efecto de neón apagado */
+}
+
+/* Efecto al hacer foco en el campo de entrada */
+input[type="text"]:focus {
+  border-color: #4FC3F7; /* Azul brillante al enfocar */
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); /* Efecto de neón azul */
+  animation: pulseNeon 1.5s ease infinite; /* Pulso de neón en el campo */
+}
+
+/* Animación de pulso de neón en el campo de entrada */
+@keyframes pulseNeon {
+  0% { box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); }
+  50% { box-shadow: 0 0 25px rgba(0, 204, 255, 1); }
+  100% { box-shadow: 0 0 20px rgba(0, 204, 255, 0.8); }
+}
+
+/* Estilo para el botón */
+button {
+  padding: 18px 28px;
+  font-size: 1.2rem;
+  background-color: #4FC3F7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0); /* Sin resplandor */
+}
+
+/* Efecto hover en el botón */
+button:hover {
+  background-color: #039BE5;
+  transform: translateY(-6px); /* Desplazamiento hacia arriba */
+  box-shadow: 0 0 25px rgba(0, 204, 255, 0.8); /* Efecto de neón al pasar el ratón */
+}
+
+/* Efecto al hacer clic en el botón */
+button:active {
+  transform: translateY(0); /* Vuelve a la posición inicial al hacer clic */
+}
+
+/* Estilo para mostrar la información de la IP */
+#ipInfo {
+  margin-top: 25px;
+  padding: 25px;
+  border: 2px solid #333;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  text-align: left;
+  color: #e0e0e0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para el cuadro de información */
+#ipInfo:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.8);
+  transform: scale(1.02); /* Ligero aumento al pasar el ratón */
+}
+
+/* Estilo para el mapa */
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease;
+}
+
+#map:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9); /* Efecto de sombra cuando se pasa el ratón */
+}
+
+/* Estilo para el párrafo adicional */
+p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin-top: 20px;
+  line-height: 1.6;
+  animation: fadeInText 2s ease-out;
+}
+
+/* Animación para el texto del párrafo */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Créditos al final de la página */
+.credits {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.credits a {
+  color: #4FC3F7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.credits a:hover {
+  color: #039BE5;
+}
+
+/* Estilo adicional de la sección de créditos */
+footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
